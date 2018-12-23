@@ -1,0 +1,13 @@
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:controller="HelloWorldFX.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <Label text="Happy Christ-max" textFill="green">
+        <font>
+            <Font name = "Times New Roman bold" size = "70"/>
+
+        </font>
+    </Label>
+</GridPane>
