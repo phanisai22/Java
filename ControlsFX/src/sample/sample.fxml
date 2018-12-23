@@ -1,0 +1,109 @@
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import java.lang.String?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <Button text="Click me" GridPane.columnIndex="0" GridPane.rowIndex="0">
+        <graphic>
+            <ImageView>
+                <Image url="@/toolbarButtonGraphics/general/TipOfTheDay16.gif"/>
+            </ImageView>
+        </graphic>
+    </Button>
+
+    <Label text="Marry ChristMas"
+           GridPane.rowIndex="0" GridPane.columnIndex="1"
+           textFill="blue" wrapText="true">
+        <font>
+            <Font name="Arial italic" size="12"/>
+        </font>
+        <graphic>
+            <ImageView>
+                <Image url="@/toolbarButtonGraphics/general/TipOfTheDay24.gif"/>
+            </ImageView>
+        </graphic>
+    </Label>
+
+    <fx:define>
+        <ToggleGroup fx:id="colorToggleGroup"/>
+    </fx:define>
+    <VBox GridPane.columnIndex="2" GridPane.rowIndex="0">
+        <RadioButton text="Red" toggleGroup="$colorToggleGroup"/>
+        <RadioButton text="Blue" toggleGroup="$colorToggleGroup" selected="true"/>
+        <RadioButton text="Green" toggleGroup="$colorToggleGroup"/>
+    </VBox>
+    <VBox GridPane.columnIndex="3" GridPane.rowIndex="0">
+        <CheckBox text="Dog"/>
+        <CheckBox text="Cat"/>
+        <CheckBox text="Lion"/>
+
+    </VBox>
+    <!--<CheckBox text="You like this, don't you ?" GridPane.rowIndex="0" GridPane.columnIndex="5"/>-->
+        <!--&lt;!&ndash;indeterminate="true"/>&ndash;&gt;-->
+
+    <HBox GridPane.rowIndex="0" GridPane.columnIndex="4">
+        <ToggleButton text="Toggle me"/>
+        <ToggleButton text="Toggle you"/>
+    </HBox>
+
+    <TextField GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <PasswordField GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+    <ComboBox GridPane.rowIndex="1" GridPane.columnIndex="2">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Option 1"/>
+                <String fx:value="Option 2"/>
+                <String fx:value="Option 3"/>
+                <String fx:value="Option 4"/>
+                <String fx:value="Option 5"/>
+            </FXCollections>
+        </items>
+        <value>
+            <String fx:value="Option 4"/>
+        </value>
+    </ComboBox>
+
+    <ChoiceBox GridPane.rowIndex="1" GridPane.columnIndex="3">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Option 1"/>
+                <String fx:value="Option 2"/>
+                <String fx:value="Option 3"/>
+                <String fx:value="Option 4"/>
+                <String fx:value="Option 5"/>
+            </FXCollections>
+        </items>
+    </ChoiceBox>
+
+    <Slider GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.columnSpan="3" min="0" max="100"
+        showTickLabels="true" showTickMarks="true" minorTickCount="4" snapToTicks="true"/>
+
+    <Spinner max="100" min="0" GridPane.columnIndex="4" GridPane.rowIndex="2"
+             editable="true" initialValue="22"/>
+
+    <ColorPicker GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.columnSpan="3"/>
+    <DatePicker GridPane.rowIndex="3" GridPane.columnIndex="3" GridPane.columnSpan="3" />
+
+    <Accordion GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.columnSpan="2"
+               expandedPane="$tp3">
+        <panes>
+            <TitledPane text="Titled pane 1">
+                <Label text="Label of titled pane 1"/>
+            </TitledPane>
+
+            <TitledPane text="Titled pane 2">
+                <Label text="Label of titled pane 2"/>
+            </TitledPane>
+
+            <TitledPane fx:id="tp3" text="Titled pane 3">
+                <Label text="Label of titled pane 3"/>
+            </TitledPane>
+        </panes>
+    </Accordion>
+
+</GridPane>
