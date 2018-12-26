@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.web.WebView?>
+
+<GridPane fx:id="gridPane" alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+
+    <!--<Button text="Button One" GridPane.rowIndex="0" GridPane.columnIndex="0"/>-->
+    <!--<Button text="Button Two" GridPane.rowIndex="0" GridPane.columnIndex="1"/>-->
+    <!--<Button text="Button Three" GridPane.rowIndex="0" GridPane.columnIndex="2"/>-->
+    <!--<Button text="Button Four" GridPane.rowIndex="0" GridPane.columnIndex="3"/>-->
+    <!--<Button text="Button Five" GridPane.rowIndex="0" GridPane.columnIndex="4"/>-->
+    <Label fx:id="labelText" onMouseExited="#handleMouseExited" onMouseMoved="#handleMouseEntered" text="Zoom In And Out" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+
+    <Button fx:id="openButton" onAction="#handleOpenButton" text="Open" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <Button onAction="#handleSaveAsButton" text="Save As" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <Button onAction="#handleOpenAsButton" text="Open As" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+
+    <!--<Button text="Help"-->
+            <!--GridPane.rowIndex="2" GridPane.columnIndex="0" onAction="#handleHelpLink"/>-->
+
+    <Hyperlink onAction="#handleHelpLink" text="www.github.com" GridPane.rowIndex="6" />
+
+    <WebView fx:id="webView" GridPane.rowIndex="7" />
+
+
+</GridPane>
